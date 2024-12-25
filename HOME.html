@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Eventos y Reservas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      position: relative;
+      background-image: url('/aplicar\ a\ trabajo.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 60vh; /* Reducido de 100vh a 60vh */
+      min-height: 400px; /* Altura mínima para evitar que sea demasiado pequeño */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 80px 0; /* Reducido el padding */
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem; /* Reducido de 4.5rem */
+      font-weight: 700;
+      margin-bottom: 0.5rem; /* Reducido de 1rem */
+      letter-spacing: 2px;
+    }
+
+    .hero-section .lead {
+      font-size: 1.5rem; /* Reducido de 1.8rem */
+      font-weight: 400;
+      margin-bottom: 1rem; /* Reducido de 2rem */
+    }
+
+    /* El resto de los estilos se mantienen igual */
+    .service-card {
+      border: none;
+      transition: transform 0.3s;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #007bff;
+    }
+
+    .btn-custom {
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .features-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .navbar {
+      background-color: rgba(33, 37, 41, 0.95) !important;
+    }
+
+    footer {
+      background-color: #212529;
+      padding: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        height: 50vh; /* Aún más pequeño en móviles */
+        min-height: 300px;
+      }
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+      .hero-section .lead {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mi Empresa</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#contratar">Contratar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reservar">Reservación</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="container">
+        <h1>Bienvenido a Mi Empresa</h1>
+        <p class="lead">Creando eventos inolvidables</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- El resto del contenido se mantiene igual -->
+  
+  <!-- Sección de Servicios -->
+  <section id="contratar" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title">Nuestros Servicios</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card service-card">
+            <img src="Evento empresaral.jpg" class="service-img" alt="Servicio de eventos">
+            <div class="card-body text-center">
+              <h3 class="card-title">Contratar Servicios</h3>
+              <p class="card-text">Ofrecemos servicios personalizados para hacer de tu evento una experiencia única e inolvidable.</p>
+              <a href="PERSONAL.html" class="btn btn-primary btn-custom">Contratar Ahora</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card service-card">
+            <img src="aplicar a trabajo.jpg" class="service-img" alt="Reservaciones">
+            <div class="card-body text-center">
+              <h3 class="card-title">Reservar Espacios</h3>
+              <p class="card-text">Reserva los mejores espacios para tu evento de forma rápida y sencilla.</p>
+              <a href="APLIACION.html" class="btn btn-primary btn-custom">Reservar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Características -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-calendar-check fa-3x mb-3 text-primary"></i>
+          <h4>Eventos Personalizados</h4>
+          <p>Adaptamos cada detalle a tus necesidades</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+          <h4>Calidad Premium</h4>
+          <p>Servicio de primera clase garantizado</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-clock fa-3x mb-3 text-primary"></i>
+          <h4>Atención 24/7</h4>
+          <p>Siempre disponibles para ayudarte</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-left">
+          <h5>Contacto</h5>
+          <p><i class="fas fa-envelope mr-2"></i> info@miempresa.com</p>
+          <p><i class="fas fa-phone mr-2"></i> (123) 456-7890</p>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <h5>Síguenos</h5>
+          <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>© 2024 Mi Empresa. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

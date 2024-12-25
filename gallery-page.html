@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería - Mi Empresa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+  <style>
+    .gallery-container {
+      padding: 100px 0;
+    }
+    
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .gallery-img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="HOME.html">Mi Empresa</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="HOME.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HOME.html#contratar">Contratar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HOME.html#reservar">Reservación</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido de la Galería -->
+  <div class="gallery-container">
+    <div class="container">
+      <!-- Sección de Fotos -->
+      <h2 class="text-center section-title">Galería de Fotos</h2>
+      <div class="row">
+        <!-- Repite este bloque para cada imagen -->
+        <div class="col-md-4">
+          <a href="/api/placeholder/800/600" data-toggle="lightbox" data-gallery="gallery" class="gallery-item">
+            <img src="/api/placeholder/400/300" class="img-fluid gallery-img" alt="Evento 1">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="/api/placeholder/800/600" data-toggle="lightbox" data-gallery="gallery" class="gallery-item">
+            <img src="/api/placeholder/400/300" class="img-fluid gallery-img" alt="Evento 2">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="/api/placeholder/800/600" data-toggle="lightbox" data-gallery="gallery" class="gallery-item">
+            <img src="/api/placeholder/400/300" class="img-fluid gallery-img" alt="Evento 3">
+          </a>
+        </div>
+        <!-- Fin del bloque de imagen -->
+      </div>
+
+      <!-- Sección de Videos -->
+      <h2 class="text-center section-title mt-5">Videos Destacados</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="video-container">
+            <!-- Ejemplo con video de Google Drive -->
+            <iframe src="https://drive.google.com/file/d/TU_ID_DEL_VIDEO/preview" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="video-container">
+            <!-- Ejemplo con video de YouTube -->
+            <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>© 2024 Mi Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts necesarios -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+  <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+</body>
+</html>
